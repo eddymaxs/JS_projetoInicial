@@ -19,6 +19,8 @@
 
     tarefa.innerHTML = novoConteudo;
     tarefa.appendChild(botaoConclui());
+    //botao deleta
+    tarefa.appendChild(botaoDeleta());
     lista.appendChild(tarefa);
     //AQUI O VALOR DO INPUT E RESETADO.
     input.value = "";
@@ -47,7 +49,7 @@
     tarefaCompleta.classList.toggle("done");
   };
   //botoa de Deletar
-  const BotaoDeleta = () => {
+  const botaoDeleta = () => {
     const botaoDeleta = document.createElement("button");
 
     botaoDeleta.innerText = "deletar";
@@ -57,7 +59,7 @@
   const deletarTarefa = (evento) => {
     const botaoDeleta = evento.target;
     const tarefaCompleta = botaoDeleta.parentElement;
-    tarefaCompleta.remove;
+    tarefaCompleta.remove();
     return botaoDeleta;
   };
 })();
